@@ -8,7 +8,7 @@ Tailwind and scss classes for styling across the platform.
 
 ## Description
 
-This module is designed to handle CRUD opertaions related to Tasks.
+This module is designed to handle CRUD operations related to Tasks.
 
 -   *User*: The standard user role, user can view, edit, delete and create new Tasks.
 
@@ -27,7 +27,7 @@ Each module comprises a tyepscript file, html, scss file (if required), and spec
 
 This folder contains:
 
-1. A indexedDb services file which handled the indexed database APIs and a NOSQL database to add, edit and delete the tasks. 
+1. A indexedDb services file which handles the indexed database APIs and a NOSQL database to add, edit and delete the tasks. 
 
 ## Development server
 
