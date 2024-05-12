@@ -1,11 +1,51 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./src/**/*.{html,scss,ts}",
-  ],
+  content: ["./src/**/*.{html,scss,ts}"],
   theme: {
+    fontSize: {
+      "xs": "0.625rem",
+      "sm": "0.75rem",
+      "md": "0.8125rem",
+      "base": "0.875rem",
+      "lg": "1rem",
+      "xl": "1.125rem",
+      "2xl": "1.25rem",
+      "3xl": "1.5rem",
+      "4xl": "2rem",
+      "5xl": "2.25rem",
+      "6xl": "2.5rem",
+      "7xl": "3rem",
+      "8xl": "4rem",
+      "9xl": "6rem",
+      "10xl": "8rem",
+    },
+    screens: {
+      sm: "600px",
+      md: "960px",
+      lg: "1280px",
+      xl: "1440px",
+    },
+    extend: {
+      animation: {
+        "spin-slow": "spin 3s linear infinite",
+      },
+      colors: {
+        "primary-dark-blue": "#161C3D",
+        "primary-blue": "#1B366E",
+        "secondary-light-blue": "#86B8DB",
+        "secondary-vibrant-blue": "#2851B5",
+        "secondary-vibrant-blue-light": "#2C5AC8",
+        "secondary-lighter-blue": "#49A7FF",
+        "semantic-green": "#229653",
+        "white": "#FAFAFA",
+        "white-background": "#FCFCFC",
+        "grey-background": "#F5F5F5",
+        "light-gray-background": "#F4F4F4",
+        "light-blue-background": "#E0F0FF",
+        "dark": "#333333",
+      },
+    },
     extend: {},
   },
   plugins: [],
-}
-
+};

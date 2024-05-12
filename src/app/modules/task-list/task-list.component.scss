@@ -1,0 +1,17 @@
+@media screen and (max-width: 1150px){    
+    .tasksList {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media screen and (max-width: 750px){    
+    .tasksList {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+}
+
+@media screen and (max-width: 400px){    
+    .taskBox{
+        width: 300px !important;
+    }
+}

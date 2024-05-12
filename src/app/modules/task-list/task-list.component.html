@@ -1,0 +1,46 @@
+<div class="flex justify-center h-[100%]">
+
+    <div class="flex flex-col w-full items-center">
+        <div class="flex w-full h-[64px] justify-between bg-[#1B366E] rounded-md p-5 mb-4"
+            style="position: sticky; top:0">
+            <span class="text-white font-sm">Task Manager</span>
+        </div>
+
+        <div class="flex flex-row justify-end items-end w-full mr-5">
+            <button class="bg-[#2851B5] h-[50px] w-[150px] text-white font-sm rounded-md" (click)="createTask()">Create
+                Task</button>
+        </div>
+
+        <h2 class="mb-3" style="color:#2C5AC8; font-weight: 600; font-size: 30px; text-decoration: underline;">Tasks List</h2>
+        <div *ngIf="tasks.length > 0; else noTasks">
+            <div class="grid grid-cols-3 gap-x-6 p-2 tasksList">
+                <div *ngFor="let task of tasks" class="rounded-md p-3 w-[350px] mt-4 taskBox" style="border:2px solid #2C5AC8">
+                    <div class="flex flex-row justify-end mt-2 mb-2">
+                        <button class="bg-[#2851B5] h-[35px] w-[120px] text-white font-sm rounded-md"
+                            (click)="editTask(task.id)">Edit Task</button>
+                    </div>
+                    <div class="flex flex-row justify-center mt-3 mb-3">
+                        <h3 class="color-[#229653] text-center"
+                            style="color:#229653; font-size: 20px; font-weight: 500; text-align: center;"><u>Task
+                                Details</u></h3>
+                    </div>
+                    <div class="flex flex-col items-star justify-between">
+                        <span class="font-lg" style="color:#2C5AC8; font-weight: 500;">Title:</span>
+                        <span class="font-md text-justify" style="color:#333333;">{{ task.taskTitle }}</span>
+                        <span class="font-lg mt-5" style="color:#2C5AC8; font-weight: 500;">Task Description:</span>
+                        <span class="font-md text-justify" style="color:#333333">{{ task.taskDescription }}</span>
+                        <span class="font-lg mt-5" style="color:#2C5AC8; font-weight: 500;">Acceptance Criteria:</span>
+                        <span class="font-md text-justify" style="color:#333333">{{task.acceptanceCriteria}}</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <ng-template #noTasks>
+            <p class="text-black">No tasks available. Click the create task button to get started!</p>
+        </ng-template>
+    </div>
+
+</div>

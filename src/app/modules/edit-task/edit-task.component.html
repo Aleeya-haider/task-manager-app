@@ -1,0 +1,90 @@
+
+<div class="flex flex-col items-center justify-center h-[100%]">
+    <div class="container flex items-center justify-center w-full">    
+        <form [formGroup]="taskForm" class="sm:px-10" class="flex justify-center flex-col items-center w-full">
+            <div class="flex flex-row mt-2 mb-2 justify-end w-full">
+                <mat-icon
+                 class="cursor-pointer text-white"
+                [svgIcon]="'delete'"
+                (click)="deleteTask()"></mat-icon>
+            </div>
+            <div class="mt-8">
+                <span id="heading" class="text-white" style="font-size: 18px; font-weight: 500; text-decoration: underline;">
+                    Edit Task
+                </span>
+            </div>
+            <div class="flex flex-row mt-4 w-full">
+                <div class="flex flex-col items-start justify-center w-full">
+
+                    <div class="w-full">
+                        <span class="text-white" style="font-size: 14px;">Task Title*</span>
+                        <mat-form-field class="w-full text-white">
+                            <input
+                                id="title"
+                                type="text"
+                                matInput
+                                [formControlName]="'taskTitle'"
+                            />
+                            <!-- <mat-error *ngIf="taskForm.get('taskTitle').hasError('required')">
+                                Please enter the task Title!
+                            </mat-error> -->
+                        </mat-form-field>
+                    </div>
+                   
+    
+                    <div class="w-full">
+                        <span class="text-white" style="font-size: 14px;">Task Description*</span>
+                        <mat-form-field appearance="fill" class="w-full text-white">
+                            <textarea
+                                id="description"
+                                type="text"
+                                matInput
+                                [formControlName]="'taskDescription'"
+                                rows="3"
+                            ></textarea>
+                            <!-- <mat-error *ngIf="taskForm.get('taskDescription').hasError('required')">
+                                Please enter the task Description!
+                            </mat-error> -->
+                        </mat-form-field>
+                    </div>
+               
+                    
+                    <div class="w-full">
+                        <span class="text-white" style="font-size: 14px;">Acceptance Criteria*</span>
+                        <mat-form-field appearance="fill" class="w-full text-white">
+                            <textarea
+                            id="criteria"
+                            matInput
+                            [formControlName]="'acceptanceCriteria'"
+                            rows="3"
+                            ></textarea>
+                            <!-- <mat-error *ngIf="taskForm.get('acceptanceCriteria').hasError('required')">
+                                Please enter the task acceptance criteria!
+                            </mat-error> -->
+                        </mat-form-field>
+                    </div>
+                
+                </div>
+            </div>
+    
+    
+            <div class="w-full flex flex-row justify-between">
+                <button class="w-[150px] h-10 rounded-md mt-5 large-btn bg-[#2C5AC8] text-white"
+                (click)="back()">
+                    Back
+                </button>
+                <button
+                class="w-[150px]  h-10 rounded-md mt-5 large-btn"
+                [ngStyle]="taskForm.invalid ? { 'background-color': '#F4F4F4', 'pointer-events': 'none', 'color': 'grey' } : { 'background-color': '#2C5AC8', 'pointer-events': 'auto', 'color': 'white' }"
+                (click)="saveTask()"
+            >
+            Save Changes
+            </button>
+            </div>
+         
+        </form>
+      </div>
+</div>
+
+
+
