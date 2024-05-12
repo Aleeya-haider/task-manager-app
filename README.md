@@ -3,18 +3,18 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.5.
 
 
-A user interface built with Angular and typescript encapsulates basic CRUD operation of task manager application. It also uses
+A user interface built with Angular and typescript encapsulates basic CRUD operations of task manager application. It also uses
 Tailwind and scss classes for styling across the platform. 
 
 ## Description
 
-This mdoule is designed to handle CRUD opertaions related to Tasks.
+This module is designed to handle CRUD opertaions related to Tasks.
 
 -   *User*: The standard user role, user can view, edit, delete and create new Tasks.
 
 ## Modules
 
-The Task Manager appliaction is modular, with each module dedicated to a specific functionality within the application. Here's an overview of the modular structure:
+The Task Manager application is modular, with each module dedicated to a specific functionality within the application. Here's an overview of the modular structure:
 
 -   *Create Task*: Redirects user to a page where user can create a task using an Angular Reactive form.
 -   *Edit Task*: Redirects user to a page where the existing task is editible, user can save changes and view the edited task on the task list page.
